@@ -1,0 +1,175 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Estación meteorológica</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="list-values">
+
+  <ion-list>
+
+    <ion-list-header>Sensores</ion-list-header>
+
+    <ion-item>
+      <ion-icon item-start>
+        <i class="wi wi-day-cloudy-high"></i>
+      </ion-icon>
+      <h2>Infrared Sky</h2>
+      <p *ngIf="sensors">{{sensors.value}}°C</p>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon item-start>
+        <i class="wi wi-day-cloudy-high"></i>
+      </ion-icon>
+      <h2>Corrected Infrared Sky</h2>
+      <p *ngIf="sensors">{{sensors.value2}}°C</p>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon item-start>
+        <i class="wi wi-day-cloudy-high"></i>
+      </ion-icon>
+      <h2>Infrared Sensor</h2>
+      <p *ngIf="sensors">{{sensors.value3}}°C</p>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon item-start>
+        <i class="wi wi-showers"></i>
+      </ion-icon>
+      <h2>Rain Sensor</h2>
+      <p *ngIf="sensors">{{sensors.value4}} cycles</p>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon item-start>
+        <i class="wi wi-showers"></i>
+      </ion-icon>
+      <h2>Rain Sensor temperature</h2>
+      <p *ngIf="sensors">{{sensors.value5}}°C</p>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon item-start>
+        <i class="wi wi-humidity"></i>
+      </ion-icon>
+      <h2>Rain Sensor Heater</h2>
+      <p *ngIf="sensors">{{sensors.value6}}%</p>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon item-start>
+        <i class="wi wi-horizon-alt"></i>
+      </ion-icon>
+      <h2>Brightness Sensor</h2>
+      <p *ngIf="sensors">{{sensors.value7}}°C</p>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon item-start>
+        <i class="wi wi-thermometer"></i>
+      </ion-icon>
+      <h2>Ambient Temp. Sensor</h2>
+      <p *ngIf="sensors">{{sensors.value8}}°C</p>
+    </ion-item>
+
+  </ion-list>
+
+
+
+  <ion-list>
+
+    <ion-list-header>Lecturas</ion-list-header>
+
+    <ion-item>
+      <ion-icon item-start>
+        <i class="wi wi-lightning"></i>
+      </ion-icon>
+      <h2>Supply</h2>
+      <p *ngIf="readings">{{readings.value | slice:0:1}}.{{readings.value | slice:1:3}}V</p>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon item-start>
+        <i class="wi wi-day-cloudy-high"></i>
+      </ion-icon>
+      <h2>Sky</h2>
+      <p *ngIf="readings">{{readings.value2 | slice:0:2}}.{{readings.value2 | slice:2:3}}°C</p>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon item-start>
+        <i class="wi wi-day-cloudy-high"></i>
+      </ion-icon>
+      <h2>Sensor</h2>
+      <p *ngIf="readings">{{readings.value3 | slice:0:2}}.{{readings.value3 | slice:2:3}}°C</p>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon item-start>
+        <i class="wi wi-thermometer"></i>
+      </ion-icon>
+      <h2>Ambient</h2>
+      <p *ngIf="readings">{{readings.value4}}°C</p>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon item-start>
+        <i class="wi wi-showers"></i>
+      </ion-icon>
+      <h2>Rain</h2>
+      <p *ngIf="readings">{{readings.value5}} cycles</p>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon item-start>
+        <i class="wi wi-raindrop"></i>
+      </ion-icon>
+      <h2>Rain Heater</h2>
+      <p *ngIf="readings">{{readings.value6 | slice:0:6}}PWN</p>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon item-start>
+        <i class="wi wi-thermometer-exterior"></i>
+      </ion-icon>
+      <h2>Rain Temp.</h2>
+      <p *ngIf="readings">{{readings.value7}} value</p>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon item-start>
+        <i class="wi wi-earthquake"></i>
+      </ion-icon>
+      <h2>LDR</h2>
+      <p *ngIf="readings">{{readings.value8}} value</p>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon item-start>
+        <i class="wi wi-time-4"></i>
+      </ion-icon>
+      <h2>Read Cycles</h2>
+      <p *ngIf="readings">{{readings.value9}}s</p>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon item-start>
+        <i class="wi wi-strong-wind"></i>
+      </ion-icon>
+      <h2>Wind Speed</h2>
+      <p *ngIf="readings">{{readings.value10}}km/h</p>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon item-start>
+        <i class="wi wi-cloud-down"></i>
+      </ion-icon>
+      <h2>Total Readings</h2>
+      <p *ngIf="readings">{{readings.value11}}</p>
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>

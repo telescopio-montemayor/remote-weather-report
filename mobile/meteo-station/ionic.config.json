@@ -1,0 +1,7 @@
+{
+  "name": "meteo-station",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
